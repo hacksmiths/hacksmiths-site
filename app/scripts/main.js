@@ -49,27 +49,11 @@ require.config({
     }
 });
 
-require(['app', 'jquery', 'prompt','jquery.stellar'], function (app, $, prompt) {
+require(['app', 'jquery', 'prompt'], function (app, $, prompt) {
     'use strict';
     // use app here
     prompt();
     if(!Modernizr.touch){
-
-        $.stellar();
-
-        $(document).on('scroll ontouchmove', function(){
-            var colorOffset = (
-                $(document).scrollTop()/(
-                    $(document).height()-
-                    $('html').height()
-                )
-            );
-/*
-            $('html').css('background',
-                'hsl('+(110+colorOffset*120)+',100%,80%)'
-            );
-*/
-        });
     }
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
