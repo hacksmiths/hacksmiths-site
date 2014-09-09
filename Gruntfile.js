@@ -308,12 +308,6 @@ module.exports = function (grunt) {
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*'
                     ]
-                },{
-                    expand: true,
-                    dot: true,
-                    cwd: 'bower_components/font-awesome',
-                    src: ['fonts/*.*'],
-                    dest: '<%= config.dist %>'
                 }]
             },
             styles: {
