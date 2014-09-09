@@ -8,7 +8,6 @@ define(['jquery'], function ($) {
 			text:"Last login: "+now.toString()+" on ttys001<br>~ <span class=\"red\">❯</span><span class=\"green\">❯</span><span class=\"blue\">❯</span> ",
 			update:function(){
 				$('#prompt').html(self.text+(self.underscore?'_':''));
-				console.log(now.toString());
 				self.underscore=!self.underscore;
 			},
 			rate:1000,
